@@ -1,0 +1,24 @@
+// 
+// 
+// 
+
+package net.fuzui.StudentInfo.mysql_rws;
+
+public enum DynamicDataSourceGlobal
+{
+    public static final DynamicDataSourceGlobal READ;
+    public static final DynamicDataSourceGlobal WRITE;
+    
+    static {
+        DynamicDataSourceGlobal.READ = new DynamicDataSourceGlobal("READ", 0);
+        DynamicDataSourceGlobal.WRITE = new DynamicDataSourceGlobal("WRITE", 1);
+        DynamicDataSourceGlobal.ENUM$VALUES = new DynamicDataSourceGlobal[] { DynamicDataSourceGlobal.READ, DynamicDataSourceGlobal.WRITE };
+    }
+    
+    private DynamicDataSourceGlobal(final String s, final int n) {
+    }
+    
+    public static DynamicDataSourceGlobal valueOf(final String s) {
+        return Enum.valueOf(DynamicDataSourceGlobal.class, s);
+    }
+}
